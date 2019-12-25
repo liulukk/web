@@ -1,0 +1,126 @@
+/*
+* @Author: 87046
+* @Date:   2019-12-22 14:49:21
+* @Last Modified by:   87046
+* @Last Modified time: 2019-12-25 16:04:31
+*/
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+div{
+	display: block;
+}
+.box1{
+	 /* height: 800px;  */
+	background-color: #211f34;
+	margin: 0 auto;
+	
+}
+#nav1{
+/* 	border: 1px solid red;
+ */	background:url(imge/8.png) no-repeat left;
+	
+	background-color: #211f34;
+	height: 800px;
+	width: 1200px;
+	margin: 20px auto;
+	position: relative;
+}
+
+.slider{
+	position: absolute;
+	background-color: #211f34;
+ 	/* border: 1px solid red; */
+ 	height: 110px;
+	width: 1000px;
+	bottom: 80px;
+
+}
+.slide{
+	/* //width: 110px; */
+	float: left;
+
+}
+.text{
+/* 	border: 1px solid red;
+ */	height: 80px;
+	width:700px;
+	position: absolute;
+	top: 50px;
+	left: 250px;
+	
+	
+}
+.clock{
+	height: 300px;
+	width: 300px;
+	position: absolute;
+/* 	border: 1px solid red;
+ */	color: #f3c258;
+	right: 50px;
+	top: 270px;
+	line-height: 30px;
+}
+.box1{
+/* 	height: 800px; 
+ */	background-color: #211f34;
+	margin: 0 auto;
+	
+}
+
+#nav2{
+	background-color: #211f34;
+	width: 1200px;
+	margin: 20px auto;
+	position: relative;
+}
+#nav3{
+
+
+	background-color: #211f34;
+	
+	width: 1200px;
+	margin: 20px auto;
+	position: relative;
+}
+#nav4{
+	background-color: #211f34;
+	width: 1200px;
+	margin: 20px auto;
+	position: relative;
+}
+.left{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	height: 100px;
+	width: 1200px;
+	background-color:#211f34;
+	opacity: 0.7;
+}
+.right{
+	position: absolute;
+	top: 500px;
+	right: 0px;  
+ 	opacity: 0.7;
+	
+}
+
+.right1{
+	position: absolute;
+	top: 500px;
+	right: 0px;  
+ 	opacity: 0.7;
+	
+}
+.right2{
+	position: absolute;
+	top: 500px;
+	right: 0px;  
+ 	opacity: 0.7;
+	
+}
