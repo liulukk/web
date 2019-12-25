@@ -1,0 +1,193 @@
+/*
+* @Author: zn
+* @Date:   2019-12-12 22:33:55
+* @Last Modified by:   zn
+* @Last Modified time: 2019-12-25 10:43:58
+*/
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+	text-align: center;
+}
+.cla{
+	margin: 0 auto;
+	/* background-color: black; */
+}
+.wzry>img{
+	position: relative;
+	width: 220px;
+	height: 100px;
+	left: 50px;
+	top: 50px;
+}
+ .head{
+	width: 1200px;
+	height: 20px;
+	margin: 0 auto;
+	position: relative;
+	background-color:#ccc;
+} 
+.rgt{
+	width: 1000px;
+	height: 20px;
+	margin: 0 auto;
+	position: relative;
+	top: -20px;
+	left: 50px;
+	overflow: hidden;
+}
+.zi{
+	width:600px ;
+	height: 20px;
+	position: relative;
+	right: -100px;
+	color:#fa9251;
+}
+.box1{
+	width:1200px;
+	height: 750px;
+	margin: 0px auto;
+	position: relative;
+	/* overflow:  hidden; */
+
+	/* background-color:black; */
+}
+.box{
+	width: 600px;
+	height: 400px;
+	top: 100px;
+	left: 50px;
+	position: relative;
+	overflow:  hidden;
+}
+.slider{
+	width: 4200px;
+	position: absolute;
+	left: -1200px;
+}
+.slide{
+	width: 600px;
+	overflow: hidden;
+	float: left;
+}
+.slide>img{
+	width: 600px;
+	height: 400px;
+}
+.box>span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	top: 175px;
+	line-height: : 50px;
+	background: rgb(255,0,0);
+	font-size: 30px;
+	position: absolute;
+	opacity: 0;
+}
+#left{
+	left: 20px;
+}
+#right{
+	right: 20px;
+}
+.nav{
+	position: absolute;
+	left: 200px;
+	bottom: 20px;
+}
+.nav>li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+.nav .active{
+	background: #fa9251;
+}
+
+.box2{
+	position: absolute;
+	width: 300px;
+	height: 400px;
+	padding: 0 20px;
+	border: 2px solid #fa9251;
+	right: 50px;
+	top: 200px;
+	}
+.box3{
+	position: absolute;
+	width: 700px;
+	top: 80px;
+	right: 0px;
+	
+}
+.box3 li{
+	height: 100px;
+	width: 200px;
+	text-align: : center;
+	line-height: 100px;
+	float:left;
+	font-size: 20px;
+	color: #fa9251;
+
+}
+.box3 li:hover{
+	width: 200px;
+	border-bottom: : 5px solid #fa9251;
+}
+.tit{
+	margin-top: 5px;
+	margin-bottom: 30px;
+	}
+.brand{
+	color: #fa9251;
+	font-size: 18px;
+	margin-right: 20px;
+	}
+.inp{
+	width: 100%;
+	height: 40px;
+	text-indent: 8px;
+	}
+.notice{
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	}
+
+.code{
+	width: 60%;
+	}
+.getCode{
+	width: 35%;
+	height: 44px;
+	float: right;
+	border: none;
+	background-color: #fa9251;
+	}
+.codeImg{
+		height: 40px;
+	}
+.btn{
+	background: #fa9251;
+	width: 100%;
+	height: 40px;
+	border: none;
+	margin-top: 8px;
+	color: #fff;
+	border-radius: 3px;
+	}
+.denglu{
+	color: #f3c258;
+}
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>王者荣耀</title>
+	<link rel="stylesheet" href="stycle.css">
+	<script src="animate.js"></script>
+</head>
+<body>
+	<div class="cla">
+	<div class="box1" id="box1" >
+		<div class="wzry">
+			<img src="img/6.png" alt="">
+		</div>
+		<div class="box3">
+			<ul>
+			<li><a href="#"></a>首页</li>
+			<li><a href="#"></a>本周限免英雄</li>
+			<li><a href="#"></a>下载内容</li>
+			</ul>
+		</div>
+		<div class="box" id="box">
+		<div class="head">
+				<img src="img/laba.png" alt="" style="margin-left: 135px; margin-top:2px;">
+				<div class="rgt" >
+					<div class="zi" id="zi" style="margin-top:-3px"><p>[温馨提示]游戏诚可贵，学习价更高！！！</p></div>
+				</div>
+		</div>
+		<div class="slider" id="slider" >
+			<div class="slide"><img src="img/5.png" alt="5"></div>
+			<div class="slide"><img src="img/1.png" alt="1"></div>
+			<div class="slide"><img src="img/b2.png" alt="2"></div>
+			<div class="slide"><img src="img/3.png" alt="3"></div>
+			<div class="slide"><img src="img/4.png" alt="4"></div>
+			<div class="slide"><img src="img/5.png" alt="5"></div>
+			<div class="slide"><img src="img/1.png" alt="1"></div>
+		</div>
+		<span id="left"><</span>
+		<span id="right">></span>
+		<ul class="nav" id="nav">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		</div>
+		<div class="box2">
+		<p class="tit">
+			<span class="brand">王者荣耀</span>
+			<span style="color: #fa9251;">用户登录</span>
+		</p>
+
+		<input class="inp" type="text" placeholder="用户名" onfocus="a()" onblur="b()">
+		<p class="notice"></p>
+
+		<input class="inp" type="password" placeholder="密码" onfocus="c()" onblur="d()">
+		<p class="notice"></p>
+
+		<div>
+			<input class="inp code" type="text" placeholder="验证码"  >
+			<button class="getCode" onclick="e()">获取验证码</button>
+		</div>
+		<div class="codeImg">
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->-
+
+		</div>
+		<p class="notice"></p>
+
+		<input type="checkbox" checked><span >下次自动登录</span>
+		<button class="btn" onclick="f()" >登录</button>
+	</div>
+	</div>
+	</div>
+
+	<script>
+	var timer=setInterval(function(){
+			var now=parseInt(getStyle(zi,"right"));
+			zi.style.right=now+1+"px";
+			if(now== 600){
+				zi.style.right = -400 + "px";
+			}
+		},10)
+
+
+		var box = document.getElementById("box");
+		var oNavlist =document.getElementById("nav").children;
+		var slider =document.getElementById("slider");
+		var left = document.getElementById("left");
+		var right=document.getElementById("right");
+		var index=1;
+		var timer;
+		var isMoving =false;
+
+		function next(){
+			if(!isMoving){
+				isMoving = true;
+				index++;
+				navChange();
+				animate(slider,{left:-600*index},function(){
+					if(index===6){
+						slider.style.left="-600px";
+						index=1;
+					}
+					isMoving=false;
+				});
+			}
+		}
+		function prev(){
+			if(!isMoving){
+				isMoving = true;
+				index--;
+				navChange();
+				animate(slider,{left:-600*index},function(){
+					if(index===0){
+						slider.style.left="-3000px";
+						index=5;
+					}
+					isMoving=false;
+				});
+			}
+		}
+		var timer=setInterval(next,2000);
+		box.onmouseover=function(){
+			animate(left,{opacity:50});
+			animate(right,{opacity:50});
+			clearInterval(timer);
+		}
+		box.onmouseout=function(){
+			animate(left,{opacity:0});
+			animate(right,{opacity:0});
+			timer =setInterval(next, 2000);
+		}
+		right.onclick=next;
+		left.onclick=prev;
+
+		for(var i=0;i<oNavlist.length;i++){
+			oNavlist[i].idx=i;
+			oNavlist[i].onclick=function(){
+				index = this.idx+1;
+				navChange();
+				animate(slider,{left:-600*index});
+			}
+		}
+
+		function navChange(){
+			for(var i=0;i<oNavlist.length;i++){
+				oNavlist[i].className="";
+			}
+			if(index===6){
+				oNavlist[0].className="active";
+			}else if(index===0){
+				oNavlist[4].className="active";
+			}else{
+				oNavlist[index-1].className="active";
+			}
+
+		}
+
+		function a(){
+			var aa=document.getElementsByClassName("notice")[0];
+			aa.innerHTML="请输入4-10位用户名";
+		}
+		function b(){
+			var bb=document.getElementsByClassName("notice")[0];
+			bb.innerHTML="";
+		}
+		function c(){
+			var cc=document.getElementsByClassName("notice")[1];
+			cc.innerHTML="请输入6-12位密码";
+		}
+		function d(){
+			var dd=document.getElementsByClassName("notice")[1];
+			dd.innerHTML="";
+		}
+		var img=document.createElement("img");
+		
+		document.getElementsByClassName("codeImg")[0].appendChild(img);
+		function e(){
+			var arry=new Array('zAZfB.jpg','ZEhUN.jpg','zFC9H.jpg','zhWY9.jpg','Zin4c.jpg','ZITGj.jpg','zJ6iV.jpg','zjsKP.jpg','ZKc9S.jpg','zKDXU.jpg');
+			var num=Math.floor((Math.random())*10);
+			img.setAttribute("src", arry[num]);
+
+		}
+		function f(){
+			var t=document.getElementsByClassName("inp")[0].value;
+			var f=document.getElementsByClassName("inp")[1].value;
+			var u=document.getElementsByClassName("inp code")[0].value;
+			var eee=0;
+			if(t.length<4||t.length>10)
+			{
+				eee=1;
+             document.getElementsByClassName("notice")[0].innerHTML="输入用户名格式错误";
+			}
+			if (f.length<6||f.length>12){
+				eee=2;
+				 document.getElementsByClassName("notice")[1].innerHTML="输入密码格式错误";
+			}
+			
+			if (u=="zAZfB"||u=="ZEhUN"||u=="zFC9H"||u=="zhWY9"||u=="Zin4c"||u=="ZITGj"||u=="zJ6iV"||u=="zjsKP"||u=="ZKc9S"||u=="zKDXU"){
+                 			
+          	                document.getElementsByClassName("notice")[2].innerHTML="";    
+          	        }  
+           else  
+           			eee=3;
+                   	document.getElementsByClassName("notice")[2].innerHTML="输入验证码错误";
+		  if(eee==0)
+			alert("登陆成功");
+
+		
+}
+
+	</script>
+</body>
+
+</html>
