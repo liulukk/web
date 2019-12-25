@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>王者荣耀</title>
+	<link rel="stylesheet" href="wangzhe.css">
+	<script src="js/animate.js"></script>
+</head>
+<body>
+		<div class="head" id="head">
+			<a href="">
+				<img src="格格要用的图片/6.png" alt="">
+			</a>
+			<div class="dl">
+				<a href="">
+				<p>首页</p>
+			</a>
+			<a href="">
+				<p>玩家论坛</p>
+			</a>
+			</div>
+		</div>	
+	<div class="main" id="main">
+		<div class="download" id="download">
+			<a href="">
+				<img src="格格要用的图片/7.png" alt="">
+			</a>
+		</div>
+		<div class="sign1" id="sign1">
+			<a href="">首页</a>
+		</div>
+		<div class="sign2" id="sign2">
+			<a href="">登录</a>
+		</div>
+		<div class="sign3" id="sign3">
+			<a href="">玩家论坛</a>
+		</div>
+		<div class="sign4" id="sign4">
+			<a href="">游戏评价</a>
+		</div>
+		<div class="sign5" id="sign5">
+			<a href="">英雄介绍</a>
+		</div>
+		<div class="sign6" id="sign6">
+			<a href="">赛事</a>
+		</div>
+		<div class="sign7" id="sign7">
+			<a href="">游戏攻略</a>
+		</div>
+		<div class="box" id="box">
+			<div class="slider" id="slider">
+				<div class="slide"><img src="格格要用的图片/5.png" alt=""></div>
+				<div class="slide"><img src="格格要用的图片/1.png" alt=""></div>
+				<div class="slide"><img src="格格要用的图片/2.png" alt=""></div>
+				<div class="slide"><img src="格格要用的图片/3.png" alt=""></div>
+				<div class="slide"><img src="格格要用的图片/4.png" alt=""></div>
+				<div class="slide"><img src="格格要用的图片/5.png" alt=""></div>
+				<div class="slide"><img src="格格要用的图片/1.png" alt=""></div>
+			</div>
+			<span id="left"> < </span>
+			<span id="right">></span>
+			<ul class="nav" id="nav">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+	</div>
+	<div class="final" id="final">
+		<a href="">腾讯公司</a>
+		<a href="">版权所有</a>
+		<a href="">市场合作</a>
+		<a href="">关于管家</a>
+	</div>
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var oNavlist = document.getElementById("nav").children;
+		var slider = document.getElementById("slider");
+		var left = document.getElementById("left");
+		var right = document.getElementById("right");
+		var head = document.getElementById("head");
+		var onDiv1 = document.getElementById("sign1");
+		var onDiv2 = document.getElementById("sign2");
+		var onDiv3 = document.getElementById("sign3");
+		var onDiv4 = document.getElementById("sign4");
+		var onDiv5 = document.getElementById("sign5");
+		var onDiv6 = document.getElementById("sign6");
+		var onDiv7 = document.getElementById("sign7");
+
+		var index = 0;
+		var timer;
+		var isMoving = false;
+
+	    onDiv1.onmouseover = function(){
+	        startMove1(0);
+	    }
+	    onDiv1.onmouseout = function(){
+	        startMove1(-70);
+	    }
+	    var timer1;
+	    function startMove1(target){
+	        clearInterval(timer1);
+	        timer1 = setInterval(function(){
+	            var speed = 0;
+	            if(onDiv1.offsetLeft<target){
+	                speed = 10;
+	            }
+	            else{
+	                speed = -10;
+	            }
+	            if(onDiv1.offsetLeft == target){
+	                clearInterval(timer1);
+	            }
+	            else{
+	                onDiv1.style.left = onDiv1.offsetLeft + speed + "px";
+	            }
+	        }, 30)
+	    }
+
+	    onDiv2.onmouseover = function(){
+	        startMove2(0);
+	    }
+	    onDiv2.onmouseout = function(){
+	        startMove2(-70);
+	    }
+	    var timer2;
+	    function startMove2(target){
+	        clearInterval(timer2);
+	        timer2 = setInterval(function(){
+	            var speed = 0;
+	            if(onDiv1.offsetLeft<target){
+	                speed = 10;
+	            }
+	            else{
+	                speed = -10;
+	            }
+	            if(onDiv2.offsetLeft == target){
+	                clearInterval(timer2);
+	            }
+	            else{
+	                onDiv2.style.left = onDiv2.offsetLeft + speed + "px";
+	            }
+	        }, 30)
+	    }
+
+	    onDiv3.onmouseover = function(){
+	        startMove3(0);
+	    }
+	    onDiv3.onmouseout = function(){
+	        startMove3(-70);
+	    }
+	    var timer3;
+	    function startMove3(target){
+	        clearInterval(timer3);
+	        timer3 = setInterval(function(){
+	            var speed = 0;
+	            if(onDiv3.offsetLeft<target){
+	                speed = 10;
+	            }
+	            else{
+	                speed = -10;
+	            }
+	            if(onDiv3.offsetLeft == target){
+	                clearInterval(timer3);
+	            }
+	            else{
+	                onDiv3.style.left = onDiv3.offsetLeft + speed + "px";
+	            }
+	        }, 30)
+	    }
+
+	    onDiv4.onmouseover = function(){
+	        startMove4(0);
+	    }
+	    onDiv4.onmouseout = function(){
+	        startMove4(-70);
+	    }
+	    var timer4;
+	    function startMove4(target){
+	        clearInterval(timer4);
+	        timer4 = setInterval(function(){
+	            var speed = 0;
+	            if(onDiv4.offsetLeft<target){
+	                speed = 10;
+	            }
+	            else{
+	                speed = -10;
+	            }
+	            if(onDiv4.offsetLeft == target){
+	                clearInterval(timer4);
+	            }
+	            else{
+	                onDiv4.style.left = onDiv4.offsetLeft + speed + "px";
+	            }
+	        }, 30)
+	    }
+
+	    onDiv5.onmouseover = function(){
+	        startMove5(0);
+	    }
+	    onDiv5.onmouseout = function(){
+	        startMove5(-70);
+	    }
+	    var timer5;
+	    function startMove5(target){
+	        clearInterval(timer5);
+	        timer5 = setInterval(function(){
+	            var speed = 0;
+	            if(onDiv5.offsetLeft<target){
+	                speed = 10;
+	            }
+	            else{
+	                speed = -10;
+	            }
+	            if(onDiv5.offsetLeft == target){
+	                clearInterval(timer5);
+	            }
+	            else{
+	                onDiv5.style.left = onDiv5.offsetLeft + speed + "px";
+	            }
+	        }, 30)
+	    }
+
+	    onDiv6.onmouseover = function(){
+	        startMove6(0);
+	    }
+	    onDiv6.onmouseout = function(){
+	        startMove6(-70);
+	    }
+	    var timer6;
+	    function startMove6(target){
+	        clearInterval(timer6);
+	        timer6 = setInterval(function(){
+	            var speed = 0;
+	            if(onDiv6.offsetLeft<target){
+	                speed = 10;
+	            }
+	            else{
+	                speed = -10;
+	            }
+	            if(onDiv6.offsetLeft == target){
+	                clearInterval(timer6);
+	            }
+	            else{
+	                onDiv6.style.left = onDiv6.offsetLeft + speed + "px";
+	            }
+	        }, 30)
+	    }
+
+	    onDiv7.onmouseover = function(){
+	        startMove7(0);
+	    }
+	    onDiv7.onmouseout = function(){
+	        startMove7(-70);
+	    }
+	    var timer7;
+	    function startMove7(target){
+	        clearInterval(timer7);
+	        timer7 = setInterval(function(){
+	            var speed = 0;
+	            if(onDiv7.offsetLeft<target){
+	                speed = 10;
+	            }
+	            else{
+	                speed = -10;
+	            }
+	            if(onDiv7.offsetLeft == target){
+	                clearInterval(timer7);
+	            }
+	            else{
+	                onDiv7.style.left = onDiv7.offsetLeft + speed + "px";
+	            }
+	        }, 30)
+	    }
+
+	    //轮播下一张的函数
+		function next(){
+			if(!isMoving){
+				isMoving = true;
+				index++;
+				navChange();
+				animate(slider,{left:-800*index},function(){
+					if(index === 6){
+					slider.style.left = "-800px";
+					index = 1;
+				}
+				isMoving = false;
+			});
+		}	
+	}
+
+		function prev(){
+			if(!isMoving){
+				isMoving = true;
+				index--;
+				navChange();
+				animate(slider,{left:-800*index},function(){
+				if(index === 0){
+					slider.style.left = "-4000px";
+					index = 5;
+				}
+				isMoving = false;
+			});
+		}
+			
+	}
+
+		var timer = setInterval(next(),3000);
+		//鼠标滑入清定时器
+		box.onmouseover = function(){
+			animate(left,{opacity:50});
+			animate(right,{opacity:50});
+			clearInterval(timer);
+		}
+		//鼠标划出开定时器
+		box.onmouseout = function(){
+			animate(left,{opacity:0});
+			animate(right,{opacity:0});
+			timer = setInterval(next,3000);
+		}
+		//左右箭头绑定事件
+		right.onclick = next;
+		left.onclick = prev;
+		//小按钮点击事件
+		for(var i = 0;i<oNavlist.length;i++){
+			oNavlist[i].idx = i;
+			oNavlist[i].onclick = function(){
+				index = this.idx + 1;
+				navChange();
+				animate(slider,{left:-800*index});
+			}
+		}
+		//小按钮背景色切换
+		function navChange(){
+			for(var i =0;i<oNavlist.length;i++){
+				oNavlist[i].className = "";
+			}
+			if(index === 6){
+				oNavlist[0].className = "active";
+			}else if(index===0){
+				oNavlist[4].className = "active";
+			}else{
+				oNavlist[index-1].className = "active";
+			}
+			
+		}
+
+	</script>
+</body>
+</html>
