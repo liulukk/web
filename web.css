@@ -11,6 +11,16 @@
 ul,li{
 	list-style: none;
 }
+a{
+	text-decoration: none;
+}
+.return {
+	font-size: 40px;
+	position: absolute;
+	top: 70px;
+	right: 50px;
+	color: #fff;
+}
 div{
 	display: block;
 }
